@@ -7,7 +7,7 @@ setup(
     version='0.1.0dev',
     packages=find_packages(),
     description='Import RSS and Atom feeds and save in the database.',
-#    long_description=open('README.rst').read(),
+    long_description=open('README.rst').read(),
     install_requires=[
         'Django >= 1.4',
         'feedparser >= 5.1.2',
