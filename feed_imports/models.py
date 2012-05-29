@@ -35,3 +35,7 @@ class FeedItem(models.Model):
 
     creation_time = models.DateTimeField(auto_now_add=True)
     publication_date = models.DateTimeField()
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('feed_item', [self.pk])
