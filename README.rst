@@ -56,3 +56,10 @@ Usage
    the language as set in the request, with a fallback to the default language.
 
    If settings.DEFAULT_LANGUAGE is not defined, English will be assumed.
+
+#. To use `feed_item.get_absolute_url()` you must the define a url with the
+   name `feed_item` in you `urls.py`. For Example::
+
+   url(r'^feed_item/(?P<pk>.+)$',
+        login_required(DetailView.as_view(model=FeedItem)),
+        name='feed_item'),
