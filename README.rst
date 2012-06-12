@@ -60,6 +60,6 @@ Usage
 #. To use `feed_item.get_absolute_url()` you must the define a url with the
    name `feed_item` in you `urls.py`. For Example::
 
-   url(r'^feed_item/(?P<pk>.+)$',
+    url(r'^feed_item/(?P<pk>.+)$',
         login_required(DetailView.as_view(model=FeedItem)),
         name='feed_item'),
