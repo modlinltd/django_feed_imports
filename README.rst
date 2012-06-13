@@ -15,7 +15,11 @@ Requirements
 Installation
 ============
 
-Install by using pip::
+Install from localshop::
+
+    pip install django-feed-imports -i http://cheese.modlinltd.com/simple
+
+Install from source with pip::
 
   pip install -e svn+ssh://code.modlinltd.com/modapps/django_feed_imports#egg=feed_imports
 
