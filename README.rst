@@ -36,9 +36,10 @@ Add it the application to your ``INSTALLED_APPS`` setting::
         'feed_imports',
     )
 
-Run `syncdb`::
+Run `syncdb` and `migrate`::
 
     python manage.py syncdb
+    python manage.py migrate
 
 Usage
 =====
