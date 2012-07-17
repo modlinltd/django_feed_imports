@@ -27,7 +27,7 @@ class FeedSource(models.Model):
 class FeedItem(models.Model):
     title = models.CharField(max_length=255, blank=False, null=False,
                              verbose_name=_('Title'))
-    content = models.TextField(blank=False, null=False,
+    content = models.TextField(blank=True, null=False,
                                verbose_name=_('Contents'))
     link = models.CharField(max_length=255, blank=True, null=True,
                             verbose_name=_('Link'))

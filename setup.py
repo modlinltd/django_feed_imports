@@ -4,7 +4,7 @@ setup(
     name='django-feed-imports',
     author='Yuri Prezument',
     author_email='yuri@modlinltd.com',
-    version='0.1.1',
+    version='0.1.2a',
     packages=find_packages(),
     description='Import RSS and Atom feeds and save in the database.',
     long_description=open('README.rst').read(),

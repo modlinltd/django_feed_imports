@@ -12,9 +12,9 @@ def import_feed_items(feed_source):
     for item in feed['items']:
         title = item['title']
 #        content = '\n'.join([c['value'] for c in item['content']])
-        description = item['description']
+        description = item.get('description', '')
         date = datetime.fromtimestamp(mktime(item['published_parsed']))
-        link = item['link']
+        link = item.get('link', '')
 
         #self.stdout.write(u'Title: "{0}"\n'.format(title))
 
