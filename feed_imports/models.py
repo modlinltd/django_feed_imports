@@ -25,6 +25,9 @@ class FeedSource(models.Model):
 
 
 class FeedItem(models.Model):
+    class Meta:
+        ordering = ['-creation_time']
+
     title = models.CharField(max_length=255, blank=False, null=False,
                              verbose_name=_('Title'))
     content = models.TextField(blank=True, null=False,
