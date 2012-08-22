@@ -6,12 +6,15 @@ from time import mktime
 
 def import_feed_items(feed_source):
     print 'Parsing "{0}", language={1}'.format(feed_source.feed_name,
-                                                  feed_source.language)
+                                               feed_source.language)
     feed = feedparser.parse(feed_source.url)
 
     for item in feed['items']:
         title = item['title']
-#        content = '\n'.join([c['value'] for c in item['content']])
+
+        # Content for atom feeds:
+        content = '<br />'.join([c['value'] for c in item.get('content', [])])
+
         description = item.get('description', '')
         date = datetime.fromtimestamp(mktime(item['published_parsed']))
         link = item.get('link', '')
@@ -23,7 +26,9 @@ def import_feed_items(feed_source):
             print 'Item already exists'
             continue
 
-        feed_source.saved_items.create(title=title, content=description,
-                                       link=link, publication_date=date)
+        feed_source.saved_items.create(title=title,
+                                       content=content or description,
+                                       link=link,
+                                       publication_date=date)
 
         print 'Item saved'
