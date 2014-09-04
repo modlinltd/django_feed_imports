@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
 from django.views.generic import DetailView
 
-from models import FeedItem
+from .models import FeedItem
 
 
 urlpatterns = patterns('',

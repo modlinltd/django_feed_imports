@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import FeedSource, FeedItem
+from .models import FeedSource, FeedItem
 
 
 class FeedSourceAdmin(admin.ModelAdmin):

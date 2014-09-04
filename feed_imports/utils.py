@@ -1,3 +1,4 @@
+from __future__ import print_function
 import feedparser
 
 from datetime import datetime
@@ -5,8 +6,8 @@ from time import mktime
 
 
 def import_feed_items(feed_source):
-    print 'Parsing "{0}", language={1}'.format(feed_source.feed_name,
-                                               feed_source.language)
+    print('Parsing "{0}", language={1}'.format(feed_source.feed_name,
+                                               feed_source.language))
     feed = feedparser.parse(feed_source.url)
 
     for item in feed['items']:
@@ -23,7 +24,7 @@ def import_feed_items(feed_source):
 
         if feed_source.saved_items.filter(title=title, publication_date=date)\
                                   .exists():
-            print 'Item already exists'
+            print('Item already exists')
             continue
 
         feed_source.saved_items.create(title=title,
@@ -31,4 +32,4 @@ def import_feed_items(feed_source):
                                        link=link,
                                        publication_date=date)
 
-        print 'Item saved'
+        print('Item saved')

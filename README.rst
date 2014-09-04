@@ -68,3 +68,12 @@ Usage
     url(r'^feed_item/(?P<pk>.+)$',
         login_required(DetailView.as_view(model=FeedItem)),
         name='feed_item'),
+
+
+Changelog
+=========
+
+0.1.6
+#####
+
+  * add Python 3 support
