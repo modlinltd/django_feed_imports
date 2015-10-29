@@ -15,17 +15,17 @@ Requirements
 Installation
 ============
 
-Install from localshop::
+Install from pypi::
 
-    pip install django-feed-imports -i http://cheese.modlinltd.com/simple
+    pip install django-feed-imports
 
 Install from source with pip::
 
-  pip install -e svn+ssh://code.modlinltd.com/modapps/django_feed_imports#egg=feed_imports
+  pip install -e https://github/modlinltd/django-feed-imports/archive/master.zip#egg=feed_imports
 
 Or install from source:
 
-    svn checkout svn+ssh://code.modlinltd.com/modapps/django_feed_imports
+    git clone https://github.com/modlinltd/django-feed-imports.git
     cd django_feed_imports
     python setup.py install
 
@@ -72,6 +72,11 @@ Usage
 
 Changelog
 =========
+
+0.1.7
+#####
+
+* Clean up README and prepare for sharing
 
 0.1.6
 #####
